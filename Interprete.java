@@ -1,5 +1,4 @@
-package mx.ipn.escom.compiladores;
-
+package interprete;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

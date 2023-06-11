@@ -1,5 +1,4 @@
-package mx.ipn.escom.compiladores;
-
+package interprete;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,6 +36,9 @@ public class Scanner {
         palabrasReservadas.put("for", TipoToken.FOR);
         palabrasReservadas.put("while", TipoToken.WHILE);
         palabrasReservadas.put("var", TipoToken.VAR);
+        palabrasReservadas.put("class", TipoToken.CLASS);
+        palabrasReservadas.put("fun",TipoToken.FUN);
+        palabrasReservadas.put("return", TipoToken.RETURN);
     }
 
     Scanner(String source){
@@ -221,7 +223,7 @@ public class Scanner {
                     }
                     else{
                         //if()
-                        tokens.add(new Token(TipoToken.DIGITO, lexema, null, linea));
+                        tokens.add(new Token(TipoToken.NUMBER, lexema, null, linea));
                         estado = 0;
                         lexema = "";
                         i--;
@@ -260,7 +262,7 @@ public class Scanner {
                     }
                     else{
                         lexema += caracter;
-                        tokens.add(new Token(TipoToken.CADENA, lexema, null, linea));
+                        tokens.add(new Token(TipoToken.STRING, lexema, null, linea));
                         estado = 0;
                         lexema = "";
                         
