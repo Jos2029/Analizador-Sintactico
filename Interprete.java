@@ -25,6 +25,8 @@ public class Interprete {
     }
 
     private static void ejecutarArchivo(String path) throws IOException {
+
+        
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         ejecutar(new String(bytes, Charset.defaultCharset()));
 

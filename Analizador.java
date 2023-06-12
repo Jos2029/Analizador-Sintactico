@@ -162,7 +162,7 @@ public class Analizador {
         || preanalisis.tipo == TipoToken.PRINT || preanalisis.tipo == TipoToken.RETURN
         || preanalisis.tipo == TipoToken.WHILE || preanalisis.tipo == TipoToken.CORCHETE_ABRE
         || preanalisis.tipo == TipoToken.SUMA){
-        System.out.println("statement");
+        //System.out.println("statement");
             STATEMENT();
             DECLARATION();
         }
